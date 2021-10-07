@@ -1,0 +1,76 @@
+<div class="sheet col-12 row">
+
+  <app-img-int class="row" [srcImage]="userPictues"> </app-img-int>
+
+  <div class="row">
+    <div class="text-center">
+      <h4 class="dynamic-title">{{dinamycTitle}}</h4>
+    </div>
+    <div class="text-center">
+      <h1 class="info-active"><b>{{infoActive}}</b></h1>
+    </div>
+    <div>
+      <div class="btn-group d-block text-center" role="group" aria-label="Basic example">
+        <a class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconUserFill', true)">
+          <i *ngIf="!iconUserFill" class="bi bi-person"></i>
+          <i *ngIf="iconUserFill" class="bi bi-person-fill indigo"></i>
+        </a>
+        <a class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconMailFill', true)">
+          <i *ngIf="!iconMailFill" class="bi bi-envelope"></i>
+          <i *ngIf="iconMailFill" class="bi bi-envelope-fill indigo"></i>
+        </a>
+        <a class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconBirthFill', true)">
+          <i *ngIf="!iconBirthFill" class="bi bi-calendar3-event"></i>
+          <i *ngIf="iconBirthFill" class="bi bi-calendar3-event-fill indigo"></i>
+        </a>
+        <a type="button" class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconPinFill', true)">
+          <i *ngIf="!iconPinFill" class="bi bi-pin-map"></i>
+          <i *ngIf="iconPinFill" class="bi bi-pin-map-fill indigo"></i>
+        </a>
+        <a class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconTelFill', true)">
+          <i *ngIf="!iconTelFill" class="bi bi-telephone"></i>
+          <i *ngIf="iconTelFill" class="bi bi-telephone-fill indigo"></i>
+        </a>
+        <a class="btn btn-link"
+          (mouseover)="setInfoAndChangIcon('iconKeyFill', true)">
+          <i *ngIf="!iconKeyFill" class="bi bi-key"></i>
+          <i *ngIf="iconKeyFill" class="bi bi-key-fill indigo"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row col-12 card-pos">
+    <div class="card col-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Login Info</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Username:</b> {{user.login.username}}</li>
+        <li class="list-group-item"><b>MD5:</b> {{user.login.md5}}</li>
+        <li class="list-group-item"><b>Salt:</b> {{user.login.salt}}</li>
+        <li class="list-group-item"><b>Sha1:</b> {{user.login.sha1}}</li>
+      </ul>
+    </div>
+
+    <div class="card col-4" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Other Personal Info</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Cell:</b> {{user.cell}}</li>
+        <li class="list-group-item"><b>Gender:</b> {{user.gender}}</li>
+        <li class="list-group-item"><b>Nationality:</b> {{user.nat}}</li>
+        <li class="list-group-item"><b>Phone:</b> {{user.phone}}</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+</div>

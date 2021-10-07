@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+body{
+  height: 98vh;
+  width: 98vw;
+  background: indigo;
+  background: linear-gradient(180deg, indigo 0%, rgba(188,214,228,1) 100%);
+}
